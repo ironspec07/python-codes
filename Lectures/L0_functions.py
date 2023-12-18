@@ -100,3 +100,15 @@ def square(n):
     #return n**2 #raising to the power of two
     return pow(n,2)#raising to the power of two
 main() #calling main function
+
+'''
+built-in functions --> which do not require def keyword and are already present in python
+
+user defined functions --> functions which are defined by user and require def keyword
+'''
+
+####################################Function - Arguments########################################################
+'''
+there are 4 types of arguments in python:
+1-
+'''
