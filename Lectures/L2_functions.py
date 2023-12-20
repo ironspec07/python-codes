@@ -1,18 +1,18 @@
 # taking name as input
-name = input("what's your name? ") 
-#removing whitespaces from string
+name = input("what's your name? ")
+# removing whitespaces from string
 name = name.strip()
-#capitalizing first character of string
+# capitalizing first character of string
 name = name.capitalize()
-#capitalizing the first letter of each word
+# capitalizing the first letter of each word
 name = name.title()
-#chaining functions
+# chaining functions
 name = name.strip().title()
-#spliting username into firstname and lastname and storing into two variables
-first,last = name.split(" ") 
+# spliting username into firstname and lastname and storing into two variables
+first, last = name.split(" ")
 # printing
-print("hello," + name) 
-print("hello,",name) # second way of printing with two argument
+print("hello," + name)
+print("hello,", name)  # second way of printing with two argument
 
 # print(*objects, sep=' ', end='\n', file=None, flush=False)
 
@@ -20,29 +20,29 @@ print("hello,",name) # second way of printing with two argument
 
 # 2-sep=' ' --> this gives space between multiple argument
 
-# 3-end='\n' --> this takes the cursor to new line 
+# 3-end='\n' --> this takes the cursor to new line
 
-print("hello,",end="") # another way of printing in same line
+print("hello,", end="")  # another way of printing in same line
 print(name)
 
-print("hello,",name,sep="") # another way of printing with two argument without space
+print("hello,", name, sep="")  # another way of printing with two argument without space
 
-print(f"hello,{name}")# printing using format string
+print(f"hello,{name}")  # printing using format string
 
-print(f"hello,{first}")# printing firstname 
-print(f"hello,{last}")# printing lastname 
+print(f"hello,{first}")  # printing firstname
+print(f"hello,{last}")  # printing lastname
 
 #######TYPECASTING###################################################################################
-num = input("enter number ") #taking input
+num = input("enter number ")  # taking input
 
-num = int(num) #typecasting string to int
+num = int(num)  # typecasting string to int
 
-num = str(num) #typecasting int to str
+num = str(num)  # typecasting int to str
 
-num = num+num
+num = num + num
 print(num)
 
-num = num*7
+num = num * 7
 print(num)
 
 # round function to convert from float to int
@@ -54,61 +54,74 @@ print(num)
 x = float(input("enter number 1: "))
 y = float(input("enter number 2: "))
 
-z = round(x+y)
-w = x/y
+z = round(x + y)
+w = x / y
 
-print(f"{z:,}")#prints sum in currency style --> 1,000(us convention)
-print(f"{w:.2f}")#prints two digits after decimal
+print(f"{z:,}")  # prints sum in currency style --> 1,000(us convention)
+print(f"{w:.2f}")  # prints two digits after decimal
 
 
 #######DEFINING FUNCTION###########################################################################
 
+
 def hello():
-    print("hello,",end="")
+    print("hello,", end="")
+
 
 name = input("what's your name? ")
 hello()
 print(name)
 
-def hello2(to): #parameterizing hello
+
+def hello2(to):  # parameterizing hello
     print("hello,", to)
+
 
 hello2(name)
 
-def hello2(to="world"):#inialising hello with default value if user does not provide parameter
+
+def hello2(
+    to="world",
+):  # inialising hello with default value if user does not provide parameter
     print("hello,", to)
+
 
 hello2()
 #######################################################################################################
-def main():#defining main function 
+def main():  # defining main function
     name = input("what's your name? ")
     hello2(name)
 
-def hello2(to): 
+
+def hello2(to):
     print("hello,", to)
 
-main() #calling main function
 
-#scope of main is only in main function
+main()  # calling main function
+
+# scope of main is only in main function
 ####################################RETURNING########################################################
-def main():#defining main function 
+def main():  # defining main function
     num = int(input("what's num? "))
-    print("square of number is " , square(num))
+    print("square of number is ", square(num))
 
-def square(n): 
-    #return n*n #returning value
-    #return n**2 #raising to the power of two
-    return pow(n,2)#raising to the power of two
-main() #calling main function
 
-'''
+def square(n):
+    # return n*n #returning value
+    # return n**2 #raising to the power of two
+    return pow(n, 2)  # raising to the power of two
+
+
+main()  # calling main function
+
+"""
 built-in functions --> which do not require def keyword and are already present in python
 
 user defined functions --> functions which are defined by user and require def keyword
-'''
+"""
 
 ####################################Function - Arguments########################################################
-'''
+"""
 there are 4 types of arguments in python:
 1-
-'''
+"""
