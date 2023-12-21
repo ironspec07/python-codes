@@ -36,15 +36,54 @@
 
 # sorted(Iterable,/,*,key=None,reverse=false)
 
-names = []
-with open("names.txt") as file:
-    for line in file:
-        names.append(line.rstrip())
+# names = []
+# with open("names.txt") as file:
+#     for line in file:
+#         names.append(line.rstrip())
         
-for name in sorted(names):
-    print(f"hello,{name}")
+# for name in sorted(names):
+#     print(f"hello,{name}")
     
-for name in sorted(names,reverse=True):#reverse list
-    print(f"hello,{name}")
+# for name in sorted(names,reverse=True):#reverse list
+#     print(f"hello,{name}")
     
 # CSV- commma seperated value
+
+# with open ("students.csv") as file:
+#     for line in file:
+#         # row = line.rstrip().split(",")
+#         name , house = line.rstrip().split(",")
+#         print(f"{name} is in {house}")
+        
+# Sorted in csv:-
+
+# students = []
+# with open ("students.csv") as file:
+#     for line in file:
+#         name , house = line.rstrip().split(",")
+#         # students.append(f"{name} is in {house}")
+# # for student in sorted(students):
+# #     print(student)
+#         student = {"Name":name , "House": house}
+#         # student["Name"] = name
+#         # student["House"] = house
+        
+#         students.append(student)
+        
+# for student in students:
+#     print(f"{student['Name']} is in {student['House']}")
+    
+# Sorting dictionaries:
+
+students = []
+with open ("students.csv") as file:
+    for line in file:
+        name , house = line.rstrip().split(",")
+        student = {"Name":name , "House": house}
+        students.append(student)
+        
+        def get_name(student):
+            return student["Name"]
+        
+for student in sorted(students , key = get_name , reverse=True):
+    print(f"{student['Name']} is in {student['House']}")
