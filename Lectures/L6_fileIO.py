@@ -75,15 +75,74 @@
     
 # Sorting dictionaries:
 
-students = []
-with open ("students.csv") as file:
-    for line in file:
-        name , house = line.rstrip().split(",")
-        student = {"Name":name , "House": house}
-        students.append(student)
+# students = []
+# with open ("students.csv") as file:
+#     for line in file:
+#         name , house = line.rstrip().split(",")
+#         student = {"Name":name , "House": house}
+#         students.append(student)
         
-        def get_name(student):
-            return student["Name"]
+#         def get_name(student):
+#             return student["Name"]
         
-for student in sorted(students , key = get_name , reverse=True):
-    print(f"{student['Name']} is in {student['House']}")
+# for student in sorted(students , key = get_name , reverse=True):
+#     print(f"{student['Name']} is in {student['House']}")
+    
+#Lambda Function:-
+
+# students = []
+# with open ("students.csv") as file:
+#     for line in file:
+#         name , house = line.rstrip().split(",")
+#         student = {"Name":name , "House": house}
+#         students.append(student)
+        
+#         # def get_name(student): # --> We can replace this function with lambda function 
+#         #     return student["Name"] # --> lambda student: student["name"]
+        
+# for student in sorted(students , key = lambda student: student["Name"]):
+#     print(f"{student['Name']} is in {student['House']}")
+    
+# CSV Library:-
+
+# import csv
+
+# students = []
+# with open ("students.csv") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         students.append({ "Name" : row["Name"],"Home" : row["Home"] })
+        
+#     # for line in file:
+#         # name , home = line.rstrip().split(",")  # this gives value error as there are two commas in a single line .
+#         # student = {"Name":name , "Home": home}
+#         # students.append(student)
+
+# for student in sorted(students , key = lambda student: student["Name"]):
+#     print(f"{student['Name']} is from {student['Home']}")
+    
+# CSV Writer
+
+# import csv
+
+# name = input("What's your name? ")
+# home = input("Where's your home? ")
+
+# with open("students.csv" , "a") as file:
+#     writer = csv.writer(file)
+#     writer.writerow([name,home])
+
+# Images and PIL Library
+import sys
+
+from PIL import Image
+
+images = []
+
+for arg in sys.argv[1:]:
+    image = Image.open(arg)
+    images.append(image)
+    
+images[0].save(
+    "costumes.gif" , save_all=True,append_images=[images[1]],duration=200,loop=0
+)
