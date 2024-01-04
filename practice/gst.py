@@ -6,6 +6,7 @@ sgst = 0.09*cost
 print(f"Add SGST 09% {sgst}")
 
 print(f"total cost of product:{cost+sgst+cgst}")
+print("hello")
 
 
 from tabulate import tabulate
